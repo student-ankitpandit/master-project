@@ -47,7 +47,7 @@ router
   .route("/cover-image")
   .patch(verifyJWT, upload.single("coverImage", updateUserCoverImage));
 
-router.route("/c/:username").get(verifyJWT, getUserChannelProfile);
+router.route("/c/:username").get(verifyJWT, getUserChannelProfile); //here we are getting data through url so make sure so you're giving the endpoint like this
 
 router.route("/watch-history").get(verifyJWT, getWatchHistory);
 
